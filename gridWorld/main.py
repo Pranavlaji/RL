@@ -1,7 +1,7 @@
 import random
 import numpy as np
 
-GRID_SIZE = 4
+GRID_SIZE = 10
 
 UP = 0
 DOWN = 1
@@ -13,14 +13,24 @@ gamma = 0.9
 epsilon = 0.1
 
 agent_pos = [0, 0]
-goal_pos = [3, 3]
+goal_pos = [6, 3]
 
 obstacles = [
     [1, 1],
-    [2, 2]
+    [2, 2],
+    [3,5],
+    [4,3],
+    [3,6],
+    [5,3],
+    [1, 2],
+    [6,5],
+    [1,3],
+    [7,6],
+    [2,3]
+    
 ]
 
-Q = np.zeros((16, 4))
+Q = np.zeros((100, 4))
 
 action_names = {
     UP: "UP",
